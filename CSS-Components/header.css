@@ -10,5 +10,5 @@ header {
   left: 0;
   height: 40px;
   width: 100vw;
-  z-index: 10;
+  z-index: 1000;
 }

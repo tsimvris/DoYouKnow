@@ -4,15 +4,15 @@
   box-sizing: border-box;
 }
 :root {
-  --background-color: #d7dedc;
+  --background-color: #536b78;
   --header-color: #563440;
   --font-color: #19647e;
   --icons-button-color: #d95d39;
-  --generic-color: #536b78;
+  --generic-color: #d7dedc;
 }
 body {
   height: calc((100vh - 40px) - 40px);
-  margin-top: 40px;
   background-color: var(--background-color);
   color: var(--font-color);
+  margin: 60px 40px;
 }
