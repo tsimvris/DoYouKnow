@@ -19,15 +19,25 @@
     <main>
         <form class="add-question-form" action="">
             <label for="input-question">
-                <input placeholder="Put your question here :" id="input-question" name="input-question" type="text">
+
+                Your Question;
             </label>
+
+
+            <textarea required placeholder="Put your question here :" id="input-question" name="input-question"
+                cols="30" rows="10"></textarea>
+
             <label for="input-answer">
-                <input placeholder="Put your answers here :" id="input-answer" name="input-answer" type="text">
+                Your answers:
             </label>
+            <textarea cols="30" rows="10" required placeholder="Please seperate with comma(,) " id=" input-answer"
+                name="input-answer" type="text"></textarea>
             <label for="input-tags">
-                <input placeholder="Put your tags here :" id="input-tags" name="input-tags" type="text">
+                Your tags:
             </label>
-            <button type="submit"></button>
+            <textarea cols="30" rows="3" required placeholder="Please seperate with comma(,) " id="input-tags"
+                name="input-tags" type="text"></textarea>
+            <button type="submit">Submit</button>
         </form>
 
     </main>

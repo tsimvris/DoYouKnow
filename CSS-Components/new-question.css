@@ -1,1 +1,26 @@
-@import "../style.css";
+.add-question-form {
+  margin: 20px -25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+  color: var(--icons-button-color);
+  background-color: var(--generic-color);
+  border-radius: 25px;
+  font-weight: 700;
+}
+textarea {
+  margin-bottom: 20px;
+  background-color: var(--background-color);
+  color: var(--icons-button-color);
+}
+::placeholder {
+  color: var(--icons-button-color);
+}
+button {
+  background-color: var(--icons-button-color);
+  color: var(--generic-color);
+  width: 80px;
+  height: 30px;
+}
