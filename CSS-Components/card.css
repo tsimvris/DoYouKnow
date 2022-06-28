@@ -39,6 +39,7 @@
   background-color: var(--icons-button-color);
   color: var(--generic-color);
 }
+
 .tags {
   margin: 20px;
   display: flex;
