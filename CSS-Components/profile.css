@@ -46,17 +46,16 @@
   padding: 0 5px;
 }
 .logout {
-  position: absolute;
-  bottom: 70px;
   color: white;
   font-weight: 800;
   background-color: red;
   border-radius: 15px;
   width: 100px;
   height: 25px;
+  position: absolute;
+  bottom: 60px;
 }
 .button-container {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
