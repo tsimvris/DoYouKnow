@@ -4,6 +4,10 @@
   border-radius: 12px;
   color: var(--font-color);
   z-index: 15;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
 }
 .card-top {
   display: flex;
@@ -23,4 +27,37 @@
 }
 .card p {
   margin: 20px;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.answer {
+  width: 50%;
+  background-color: var(--icons-button-color);
+  color: var(--generic-color);
+}
+.tags {
+  margin: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+.tags span {
+  border: 2px dotted var(--icons-button-color);
+  border-radius: 5px;
+  width: 45%;
+  background-color: var(--font-color);
+  color: var(--icons-button-color);
+  font-weight: 600;
+  text-align: center;
+}
+.tags span:before {
+  content: "#";
+  margin-right: 5px;
 }
