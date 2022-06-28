@@ -18,7 +18,7 @@ textarea {
 ::placeholder {
   color: var(--icons-button-color);
 }
-button {
+.submit-button {
   background-color: var(--icons-button-color);
   color: var(--generic-color);
   width: 80px;
