@@ -55,7 +55,7 @@
   row-gap: 10px;
   column-gap: 10px;
 }
-.tags span {
+.tags button {
   border: 2px dotted var(--icons-button-color);
   border-radius: 5px;
   width: 45%;
@@ -64,7 +64,11 @@
   font-weight: 600;
   text-align: center;
 }
-.tags span:before {
+.tags button:before {
   content: "#";
   margin-right: 5px;
+}
+.tags button:hover {
+  background-color: var(--icons-button-color);
+  color: var(--font-color);
 }
