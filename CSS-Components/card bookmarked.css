@@ -23,10 +23,10 @@
   position: absolute;
   right: 15px;
   top: -5px;
-  color: var(--icons-button-color);
+  color: black;
 }
 .card-top a i:hover {
-  color: black;
+  color: var(--icons-button-color);
 }
 
 .card p {
