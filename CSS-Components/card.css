@@ -25,6 +25,9 @@
   top: -5px;
   color: var(--icons-button-color);
 }
+.card-top a i:hover {
+  color: black;
+}
 .card p {
   margin: 20px;
 }
@@ -39,7 +42,10 @@
   background-color: var(--icons-button-color);
   color: var(--generic-color);
 }
-
+.answer:hover {
+  color: var(--icons-button-color);
+  background-color: var(--generic-color);
+}
 .tags {
   margin: 20px;
   display: flex;
