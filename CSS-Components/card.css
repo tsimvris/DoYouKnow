@@ -28,6 +28,12 @@
 .card-top a i:hover {
   color: black;
 }
+/** If Bookmark is bookmarked then
+
+.card-top a i{
+  color: var(--generic-color)
+}
+**/
 .card p {
   margin: 20px;
 }
