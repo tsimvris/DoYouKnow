@@ -13,7 +13,7 @@
 textarea {
   margin-bottom: 20px;
   background-color: var(--background-color);
-  color: var(--icons-button-color);
+  color: var(--generic-color);
 }
 ::placeholder {
   color: var(--icons-button-color);
