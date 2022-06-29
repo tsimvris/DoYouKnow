@@ -16,7 +16,7 @@ textarea {
   color: var(--generic-color);
 }
 ::placeholder {
-  color: var(--icons-button-color);
+  color: var(--generic-color);
 }
 .submit-button {
   background-color: var(--icons-button-color);
