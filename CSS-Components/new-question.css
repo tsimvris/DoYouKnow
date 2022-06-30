@@ -1,5 +1,5 @@
 .add-question-form {
-  margin: 20px -25px;
+  margin: 40px auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,9 @@
   font-weight: 700;
 }
 textarea {
-  margin-bottom: 20px;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 15px;
   background-color: var(--background-color);
   color: var(--generic-color);
 }
