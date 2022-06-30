@@ -1,4 +1,4 @@
-footer {
+nav {
   display: flex;
   justify-content: space-around;
   position: fixed;
@@ -9,7 +9,7 @@ footer {
   width: 100vw;
   background-color: var(--header-color);
 }
-footer a {
+nav a {
   display: flex;
   justify-content: center;
   align-items: center;

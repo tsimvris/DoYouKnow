@@ -39,7 +39,7 @@
   border-radius: 5px;
 }
 .my-tags ul li {
-  background-color: var(--generic-color);
+  background-color: var(--header-color);
   color: var(--icons-button-color);
   border-radius: 5px;
   padding: 0 5px;
