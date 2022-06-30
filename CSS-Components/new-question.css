@@ -1,5 +1,4 @@
 .add-question-form {
-  margin: 40px auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,6 +16,9 @@ textarea {
   background-color: var(--background-color);
   color: var(--generic-color);
 }
+label {
+  margin: 10px;
+}
 ::placeholder {
   color: var(--generic-color);
 }
@@ -24,5 +26,6 @@ textarea {
   background-color: var(--icons-button-color);
   color: var(--generic-color);
   width: 80px;
-  height: 30px;
+  height: 35px;
+  margin: 20px auto;
 }
