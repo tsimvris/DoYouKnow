@@ -38,11 +38,14 @@
   list-style: "";
   border-radius: 5px;
 }
+.my-tags ul li::before {
+  content: "# ";
+}
 .my-tags ul li {
   background-color: var(--header-color);
   color: var(--icons-button-color);
   border-radius: 5px;
-  padding: 0 5px;
+  padding: 5px 5px;
 }
 .logout {
   color: white;
@@ -51,6 +54,7 @@
   border-radius: 15px;
   width: 100px;
   height: 25px;
+  margin-top: 30px;
 }
 .profile-container {
   display: flex;
