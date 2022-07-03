@@ -4,11 +4,11 @@
   box-sizing: border-box;
 }
 :root {
-  --background-color: #b1b6a6;
-  --header-color: #3b3561;
-  --font-color: #d1495b;
-  --icons-button-color: #ff7f11;
-  --generic-color: #0b7a75;
+  --background-color: #161a21; /* SAFE */
+  --header-color: #000; /* SAFE */
+  --font-color: #cd0f8b;
+  --icons-button-color: #ff6e48; /*SAFE */
+  --generic-color: #05b0bc;
 }
 body {
   background-color: var(--background-color);

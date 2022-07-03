@@ -22,6 +22,9 @@
   color: var(--icons-button-color);
   margin-bottom: 10px;
 }
+.text-about-me {
+  color: var(--generic-color);
+}
 .my-tags {
   margin: 20px;
   display: flex;
@@ -42,8 +45,8 @@
   content: "# ";
 }
 .my-tags ul li {
-  background-color: var(--header-color);
-  color: var(--icons-button-color);
+  background-color: var(--generic-color);
+  color: var(--font-color);
   border-radius: 5px;
   padding: 5px 5px;
 }

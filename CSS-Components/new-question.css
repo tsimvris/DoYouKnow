@@ -5,7 +5,7 @@
   flex-direction: column;
   height: 80vh;
   color: var(--icons-button-color);
-  background-color: var(--generic-color);
+  background-color: var(--header-color);
   border-radius: 25px;
   font-weight: 700;
 }
