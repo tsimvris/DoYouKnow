@@ -26,6 +26,20 @@
   top: -22px;
   right: 15px;
 }
+.filter-orange {
+  position: absolute;
+  top: 15px;
+  width: 32px;
+  height: 32px;
+  right: -8px;
+
+  filter: invert(58%) sepia(39%) saturate(3628%) hue-rotate(330deg)
+    brightness(101%) contrast(101%);
+}
+.filterBlue {
+  filter: invert(46%) sepia(73%) saturate(596%) hue-rotate(136deg)
+    brightness(103%) contrast(96%) !important;
+}
 .card p {
   margin: 20px;
 }

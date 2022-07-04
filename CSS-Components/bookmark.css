@@ -16,9 +16,13 @@
   z-index: 16;
   margin: 5px;
 }
+.showAnswer {
+  visibility: hidden;
+}
 .card-top h3 {
   color: var(--icons-button-color);
 }
+
 .bookmark-button {
   background: transparent;
   border: 0;
