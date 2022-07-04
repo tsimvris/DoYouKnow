@@ -19,16 +19,13 @@
 .card-top h3 {
   color: var(--icons-button-color);
 }
-.card-top a i {
+.bookmark-button {
+  background: transparent;
+  border: 0;
   position: absolute;
+  top: -22px;
   right: 15px;
-  top: -5px;
-  color: var(--font-color);
 }
-.card-top a i:hover {
-  color: var(--icons-button-color);
-}
-
 .card p {
   margin: 20px;
 }
