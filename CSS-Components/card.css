@@ -19,6 +19,9 @@
 .card-top h3 {
   color: var(--icons-button-color);
 }
+.showAnswer {
+  visibility: hidden;
+}
 .bookmark-button {
   background: transparent;
   border: 0;
@@ -32,7 +35,6 @@
   width: 32px;
   height: 32px;
   right: -8px;
-
   filter: invert(58%) sepia(39%) saturate(3628%) hue-rotate(330deg)
     brightness(101%) contrast(101%);
 }
