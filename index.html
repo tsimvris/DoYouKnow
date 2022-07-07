@@ -13,42 +13,170 @@
 </head>
 
 <body>
-    <header>
-        <h1>Did You Knew ?</h1>
-    </header>
-    <main>
-        <div class="card">
-            <div class="card-top">
+    <div class="mainPage showMain" data-js="main">
+        <header>
+            <h1>Did You Knew ?</h1>
+        </header>
+        <main>
+            <div class="card">
+                <div class="card-top">
 
-                <h3>Question:</h3>
-                <button data-js="bookmark-button" class="bookmark-button" type="button">
-                    <img data-js="bookmark" class="filter-orange" src="./assets/bookmark-svgrepo-com (1).svg" alt="">
-                </button>
+                    <h3>Question:</h3>
+                    <button data-js="bookmark-button" class="bookmark-button" type="button">
+                        <img data-js="bookmark" class="filter-orange" src="./assets/bookmark-svgrepo-com (1).svg"
+                            alt="">
+                    </button>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore natus numquam harum.</p>
+                <div class="button-container"><button data-js="showAnswer" class="answer">Show Answer</button></div>
+                <p class="showAnswer" data-js="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                    sunt vero dicta non!
+                </p>
+                <div class="tags">
+                    <button type="button"><span>Travel</span></button>
+                    <button type="button"><span>History</span></button>
+                    <button type="button"><span>Technology</span></button>
+                    <button type="button"><span>Time</span></button>
+
+                </div>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore natus numquam harum.</p>
-            <div class="button-container"><button data-js="showAnswer" class="answer">Show Answer</button></div>
-            <p class="showAnswer" data-js="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-                sunt vero dicta non!
-            </p>
-            <div class="tags">
-                <button type="button"><span>Travel</span></button>
-                <button type="button"><span>History</span></button>
-                <button type="button"><span>Technology</span></button>
-                <button type="button"><span>Time</span></button>
 
+        </main>
+        <nav>
+
+            <button><i class="gg-home"></i></button>
+            <button><i class="gg-bookmark"></i></button>
+            <button><i class="gg-menu-boxed"></i></button>
+            <button><i class="gg-profile"></i></button>
+
+        </nav>
+    </div>
+
+    <div class="bookmarkSection showBookmarks" data-js="bookmark">
+        <header>
+            <h1>My Bookmarks</h1>
+        </header>
+        <main>
+            <div class="card">
+                <div class="card-top">
+
+                    <h3>Question:</h3>
+                    <button data-js="bookmark-button" class="bookmark-button" type="button">
+                        <img data-js="bookmark" class="bookmark filter-orange"
+                            src="../assets/bookmark-svgrepo-com (1).svg" alt=""></button>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore natus numquam harum.</p>
+                <div class="button-container"><button data-js="showAnswer" class="answer">Show Answer</button></div>
+                <p class="showAnswer" data-js="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                    sunt vero dicta non!
+                </p>
+                <div class="tags">
+                    <button type="button"><span>Travel</span></button>
+                    <button type="button"><span>History</span></button>
+                    <button type="button"><span>Technology</span></button>
+                    <button type="button"><span>Time</span></button>
+
+                </div>
             </div>
-        </div>
+        </main>
+        <nav>
 
-    </main>
-    <nav>
+            <button><i class="gg-home"></i></button>
+            <button><i class="gg-bookmark"></i></button>
+            <button><i class="gg-menu-boxed"></i></button>
+            <button><i class="gg-profile"></i></button>
 
-        <a href="./index.html"><i class="gg-home"></i></a>
-        <a href="./Pages/bookmark.html"><i class="gg-bookmark"></i></a>
-        <a href="./Pages/newquestion.html"><i class="gg-menu-boxed"></i></a>
-        <a href="./Pages/profile.html"><i class="gg-profile"></i></a>
+        </nav>
+    </div>
+    <div class="createSection showCreate" data-js="create">
+        <header>
+            <h1>Create</h1>
+        </header>
+        <main>
+            <form class="add-question-form" action="">
+                <label for="input-question">
+                    <legend>Your Question:</legend>
+                </label>
+                <textarea required placeholder="Put your question here :" id="input-question" name="new-question"
+                    cols="30" rows="10"></textarea>
+                <label for="input-answer">
+                    <legend>Your answers:</legend>
+                </label>
 
-    </nav>
+                <textarea cols="30" rows="10" required placeholder="Please seperate with comma(,) " id=" input-answer"
+                    name="new-answer" type="text"></textarea>
+                <label for="input-tags">
+                    <legend>Your tags:</legend>
+                </label>
+                <textarea cols="30" rows="3" required placeholder="Please seperate with comma(,) " id="input-tags"
+                    name="new-tags" type="text"></textarea>
+                <button class="submit-button" type="submit">Submit</button>
+            </form>
+
+        </main>
+        <nav>
+
+            <button><i class="gg-home"></i></button>
+            <button><i class="gg-bookmark"></i></button>
+            <button><i class="gg-menu-boxed"></i></button>
+            <button><i class="gg-profile"></i></button>
+
+        </nav>
+    </div>
+    <div data-js="profile" class="profileSection showProfile">
+        <header>
+            <h1>Profile</h1>
+        </header>
+        <main>
+            <div class="profile-container">
+                <div class="profile-info">
+                    <img class="profile-pic" src="../assets/me.jpeg" alt="Profile Picture">
+                    <h3 class="username">Petros_91</h3>
+                </div>
+                <div class="aboutMe">
+                    <h5>About Me</h5>
+
+                    <p class="text-about-me">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil beatae
+                        aliquid
+                        qui veritatis ad. Ut
+                        alias
+                        aspernatur rem iste sunt consequatur nihil nisi mollitia earum?</p><br>
+
+
+                </div>
+                <div class="my-tags">
+                    <h5>My Skills</h5>
+                    <ul>
+                        <li>Countries</li>
+                        <li>Celebrities</li>
+                        <li>History</li>
+                        <li>Technology</li>
+                        <li>Space</li>
+                        <li>Celebrities</li>
+                        <li>History</li>
+                        <li>Space</li>
+                        <li>Technology</li>
+                        <li>Space</li>
+
+                    </ul>
+                </div>
+                <button class="logout" type="submit">Logout</button>
+            </div>
+
+
+        </main>
+        <nav>
+
+            <button data-js="goToMain"><i class="gg-home"></i></button>
+            <button data-js="goToBookmark"><i class="gg-bookmark"></i></button>
+            <button data-js="goToCreate"><i class="gg-menu-boxed"></i></button>
+            <button data-js="goToProfile"><i class="gg-profile"></i></button>
+
+        </nav>
+    </div>
+
     <script src="./index.js" defer type="module"></script>
+    <script src="./visibilities.js"></script>
 </body>
 
 </html>

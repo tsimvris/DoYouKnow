@@ -9,7 +9,7 @@ nav {
   width: 100vw;
   background-color: var(--header-color);
 }
-nav a {
+nav button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,4 +17,6 @@ nav a {
   height: 50px;
   color: var(--icons-button-color);
   text-decoration: none;
+  background-color: transparent;
+  border: none;
 }

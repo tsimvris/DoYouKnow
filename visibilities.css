@@ -1,0 +1,12 @@
+.showMain {
+  display: initial;
+}
+.showBookmarks {
+  display: none;
+}
+.showCreate {
+  display: none;
+}
+.showProfile {
+  display: none;
+}
