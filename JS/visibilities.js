@@ -52,4 +52,5 @@ export default function OnePage() {
     profilePage.classList.add("showProfile");
     loginPage.classList.remove("hideLogin");
   });
+  console.clear();
 }
