@@ -1,0 +1,27 @@
+.showMain {
+  display: none;
+}
+.showBookmarks {
+  display: none;
+}
+.showCreate {
+  display: none;
+}
+.showProfile {
+  display: none;
+}
+.login {
+  display: flex;
+  color: whitesmoke;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hideLogin {
+  display: none;
+}
+.login button {
+  margin-top: 20px;
+  width: 50px;
+  background-color: var(--icons-button-color);
+}

@@ -13,6 +13,21 @@
 </head>
 
 <body>
+    <div data-js="loginPage" class="login">
+        <form action="">
+            <legend>Username</legend>
+            <label for="username">
+                <input class="username" type="text" name="username" id="username" placeholder="Your Username:" required>
+            </label>
+            <legend>Password</legend>
+            <label for="Password">
+                <input class="password" type="password" name="password" id="password" placeholder="Your Password:"
+                    required>
+            </label>
+        </form>
+        <button data-js="login" class="">Login</button>
+    </div>
+
     <div class="mainPage showMain" data-js="main">
         <header>
             <h1>Did You Knew ?</h1>
@@ -42,17 +57,10 @@
             </div>
 
         </main>
-        <nav>
 
-            <button><i class="gg-home"></i></button>
-            <button><i class="gg-bookmark"></i></button>
-            <button><i class="gg-menu-boxed"></i></button>
-            <button><i class="gg-profile"></i></button>
-
-        </nav>
     </div>
 
-    <div class="bookmarkSection showBookmarks" data-js="bookmark">
+    <div class="bookmarkSection showBookmarks" data-js="bookmarkPage">
         <header>
             <h1>My Bookmarks</h1>
         </header>
@@ -79,14 +87,7 @@
                 </div>
             </div>
         </main>
-        <nav>
 
-            <button><i class="gg-home"></i></button>
-            <button><i class="gg-bookmark"></i></button>
-            <button><i class="gg-menu-boxed"></i></button>
-            <button><i class="gg-profile"></i></button>
-
-        </nav>
     </div>
     <div class="createSection showCreate" data-js="create">
         <header>
@@ -114,14 +115,7 @@
             </form>
 
         </main>
-        <nav>
 
-            <button><i class="gg-home"></i></button>
-            <button><i class="gg-bookmark"></i></button>
-            <button><i class="gg-menu-boxed"></i></button>
-            <button><i class="gg-profile"></i></button>
-
-        </nav>
     </div>
     <div data-js="profile" class="profileSection showProfile">
         <header>
@@ -165,18 +159,18 @@
 
 
         </main>
-        <nav>
 
-            <button data-js="goToMain"><i class="gg-home"></i></button>
-            <button data-js="goToBookmark"><i class="gg-bookmark"></i></button>
-            <button data-js="goToCreate"><i class="gg-menu-boxed"></i></button>
-            <button data-js="goToProfile"><i class="gg-profile"></i></button>
-
-        </nav>
     </div>
+    <nav>
 
+        <button><i class="gg-home"></i></button>
+        <button><i class="gg-bookmark"></i></button>
+        <button><i class="gg-menu-boxed"></i></button>
+        <button><i class="gg-profile"></i></button>
+
+    </nav>
     <script src="./index.js" defer type="module"></script>
-    <script src="./visibilities.js"></script>
+    <script src="./visibilities.js" defer></script>
 </body>
 
 </html>
