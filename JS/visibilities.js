@@ -19,24 +19,28 @@ export default function OnePage() {
     bookmarkPage.classList.add("showBookmarks");
     createPage.classList.add("showCreate");
     profilePage.classList.add("showProfile");
+    loginPage.classList.add("hideLogin");
   });
   bookmarkButton.addEventListener("click", () => {
     homePage.classList.add("showMain");
     bookmarkPage.classList.remove("showBookmarks");
     createPage.classList.add("showCreate");
     profilePage.classList.add("showProfile");
+    loginPage.classList.add("hideLogin");
   });
   createButton.addEventListener("click", () => {
     homePage.classList.add("showMain");
     bookmarkPage.classList.add("showBookmarks");
     createPage.classList.remove("showCreate");
     profilePage.classList.add("showProfile");
+    loginPage.classList.add("hideLogin");
   });
   profileButton.addEventListener("click", () => {
     homePage.classList.add("showMain");
     bookmarkPage.classList.add("showBookmarks");
     createPage.classList.add("showCreate");
     profilePage.classList.remove("showProfile");
+    loginPage.classList.add("hideLogin");
   });
 
   loginButton.addEventListener("click", () => {
