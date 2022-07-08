@@ -85,19 +85,16 @@ export default function addCard() {
     /* create Tags */
     /*tag 1*/
     const tagButton1 = document.createElement("button");
-    tagsWrapper.append(tagButton1);
     tagButton1.innerText = card.tags[0];
     /*tag 2*/
     const tagButton2 = document.createElement("button");
-    tagsWrapper.append(tagButton2);
     tagButton2.innerText = card.tags[1];
     /*tag 3 */
     const tagButton3 = document.createElement("button");
-    tagsWrapper.append(tagButton3);
     tagButton3.innerText = card.tags[2];
     /* tag 4*/
     const tagButton4 = document.createElement("button");
-    tagsWrapper.append(tagButton4);
     tagButton4.innerText = card.tags[3];
+    tagsWrapper.append(tagButton1, tagButton2, tagButton3, tagButton4);
   });
 }
