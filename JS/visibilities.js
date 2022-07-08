@@ -13,7 +13,7 @@ export default function OnePage() {
   const profilePage = document.querySelector('[data-js="profile"]');
   const loginPage = document.querySelector('[data-js="loginPage"]');
 
-  // NAV BAR BUTTONS
+  // NAV BAR BUTTONS CLICK EVENTS
   homeButton.addEventListener("click", () => {
     homePage.classList.remove("showMain");
     bookmarkPage.classList.add("showBookmarks");
