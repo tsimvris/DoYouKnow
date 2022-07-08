@@ -42,9 +42,9 @@ export default function addCard() {
 
     /* create card header bookmark button image */
     const bookmarkImage = document.createElement("img");
-    bookmarkImage.classList.add("filter-orange");
+    bookmarkImage.classList.add("booky", "filter-orange");
     bookmarkImage.setAttribute("data-js", "bookmark");
-    /*bookmarkImage.src("../assets/bookmark.svg");*/
+    bookmarkImage.src = "../assets/bookmark.svg";
     headerButton.append(bookmarkImage);
 
     /* add question on P */
@@ -52,10 +52,11 @@ export default function addCard() {
     element.append(oneQuestion);
     oneQuestion.innerText = card.question;
 
-    /* create show answer bbtton */
+    /* create show answer button and answer container*/
     const divWrapper = document.createElement("div");
     divWrapper.classList.add("button-container");
     element.append(divWrapper);
+    /* create show answer button */
     const showAnswerButton = document.createElement("button");
     showAnswerButton.classList.add("answer");
     showAnswerButton.setAttribute("data-js", '"showAnswer"');
@@ -67,7 +68,7 @@ export default function addCard() {
     oneAnswer.classList.add("showAnswer");
     oneAnswer.setAttribute("data-js", '"answer"');
     oneAnswer.innerText = card.answer;
-    element.append(oneAnswer);
+    divWrapper.append(oneAnswer);
 
     /* create tags wrapper */
     const tagsWrapper = document.createElement("div");
