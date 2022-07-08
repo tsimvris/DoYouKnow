@@ -3,6 +3,7 @@ import Answer from "./JS/show-answer.js";
 import OnePage from "./JS/visibilities.js";
 import addCard from "./JS/card.js";
 addCard();
-Bookmark();
 Answer();
+
+Bookmark();
 OnePage();

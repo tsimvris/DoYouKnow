@@ -56,6 +56,7 @@ export default function addCard() {
     const divWrapper = document.createElement("div");
     divWrapper.classList.add("button-container");
     element.append(divWrapper);
+    divWrapper.setAttribute("data-js", "card__container");
     /* create show answer button */
     const showAnswerButton = document.createElement("button");
     showAnswerButton.classList.add("answer");
