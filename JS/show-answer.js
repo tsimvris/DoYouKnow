@@ -3,13 +3,12 @@ export default function Answer() {
 
   let answer = document.querySelector('[data-js="answer"]');
 
-  function revealAnswer() {
+  answerButton.addEventListener("click", () => {
     answer.classList.toggle("showAnswer");
     if (answerButton.innerHTML === "Show Answer") {
       answerButton.innerHTML = "Hide Answer";
     } else {
       answerButton.innerHTML = "Show Answer";
     }
-  }
-  answerButton.addEventListener("click", revealAnswer);
+  });
 }
