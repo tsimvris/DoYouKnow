@@ -60,14 +60,14 @@ export default function addCard() {
     /* create show answer button */
     const showAnswerButton = document.createElement("button");
     showAnswerButton.classList.add("answer");
-    showAnswerButton.setAttribute("data-js", '"showAnswer"');
+    showAnswerButton.setAttribute("data-js", "showAnswer");
     showAnswerButton.innerText = "Show answer";
     divWrapper.append(showAnswerButton);
 
     /* Create Answer */
     const oneAnswer = document.createElement("p");
     oneAnswer.classList.add("showAnswer");
-    oneAnswer.setAttribute("data-js", '"answer"');
+    oneAnswer.setAttribute("data-js", "answer");
     oneAnswer.innerText = card.answer;
     divWrapper.append(oneAnswer);
 
