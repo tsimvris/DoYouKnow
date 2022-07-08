@@ -15,6 +15,12 @@ export default function addCard() {
       answer: "Prof. Snape",
       tags: ["Harry Potter", "Films", "Fantasy", "Hollywood"],
     },
+    {
+      question:
+        "The only known monotremes in the animal kingdom are the echidna and which other creature?",
+      answer: "The Platypus",
+      tags: ["Animals", "General", "xxx", "xxx"],
+    },
   ];
 
   const main = document.querySelector('[data-js="main"]');
