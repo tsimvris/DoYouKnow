@@ -7,7 +7,7 @@ export default function Bookmark() {
     });
   }
 
-  bookmarks.forEach((element) => {
-    Bookmark(element);
+  bookmarks.forEach((mark) => {
+    Bookmark(mark);
   });
 }

@@ -4,22 +4,19 @@ export default function addCard() {
       question: "Where is the biggest building in the world?",
       answer: "Dubai",
       tags: ["Cities", "Geography", "Generall", "Our World"],
+      isBookmarked: false,
     },
     {
       question: "Where did Harry Potter Studied?",
       answer: "Hogwarts",
       tags: ["Fantasy", "Harry Potter", "Films", "Hollywood"],
+      isBookmarked: false,
     },
     {
       question: "Who Killed Dumbledore?",
       answer: "Prof. Snape",
       tags: ["Harry Potter", "Films", "Fantasy", "Hollywood"],
-    },
-    {
-      question:
-        "The only known monotremes in the animal kingdom are the echidna and which other creature?",
-      answer: "The Platypus",
-      tags: ["Animals", "General", "xxx", "xxx"],
+      isBookmarked: false,
     },
   ];
 
@@ -82,19 +79,10 @@ export default function addCard() {
     tagsWrapper.classList.add("tags");
     element.append(tagsWrapper);
 
-    /* create Tags */
-    /*tag 1*/
-    const tagButton1 = document.createElement("button");
-    tagButton1.innerText = card.tags[0];
-    /*tag 2*/
-    const tagButton2 = document.createElement("button");
-    tagButton2.innerText = card.tags[1];
-    /*tag 3 */
-    const tagButton3 = document.createElement("button");
-    tagButton3.innerText = card.tags[2];
-    /* tag 4*/
-    const tagButton4 = document.createElement("button");
-    tagButton4.innerText = card.tags[3];
-    tagsWrapper.append(tagButton1, tagButton2, tagButton3, tagButton4);
+    card.tags.forEach((tag) => {
+      const newTag = document.createElement("button");
+      newTag.innerText = tag;
+      tagsWrapper.append(newTag);
+    });
   });
 }
