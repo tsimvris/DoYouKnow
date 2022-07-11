@@ -25,3 +25,6 @@
   width: 50px;
   background-color: var(--icons-button-color);
 }
+.activeButton {
+  color: var(--generic-color);
+}

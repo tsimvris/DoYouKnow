@@ -20,6 +20,10 @@ export default function OnePage() {
     createPage.classList.add("showCreate");
     profilePage.classList.add("showProfile");
     loginPage.classList.add("hideLogin");
+    homeButton.classList.add("activeButton");
+    bookmarkButton.classList.remove("activeButton");
+    createButton.classList.remove("activeButton");
+    profileButton.classList.remove("activeButton");
   });
   bookmarkButton.addEventListener("click", () => {
     homePage.classList.add("showMain");
@@ -27,6 +31,10 @@ export default function OnePage() {
     createPage.classList.add("showCreate");
     profilePage.classList.add("showProfile");
     loginPage.classList.add("hideLogin");
+    bookmarkButton.classList.add("activeButton");
+    homeButton.classList.remove("activeButton");
+    createButton.classList.remove("activeButton");
+    profileButton.classList.remove("activeButton");
   });
   createButton.addEventListener("click", () => {
     homePage.classList.add("showMain");
@@ -34,6 +42,10 @@ export default function OnePage() {
     createPage.classList.remove("showCreate");
     profilePage.classList.add("showProfile");
     loginPage.classList.add("hideLogin");
+    createButton.classList.add("activeButton");
+    profileButton.classList.remove("activeButton");
+    homeButton.classList.remove("activeButton");
+    bookmarkButton.classList.remove("activeButton");
   });
   profileButton.addEventListener("click", () => {
     homePage.classList.add("showMain");
@@ -41,6 +53,10 @@ export default function OnePage() {
     createPage.classList.add("showCreate");
     profilePage.classList.remove("showProfile");
     loginPage.classList.add("hideLogin");
+    profileButton.classList.add("activeButton");
+    createButton.classList.remove("activeButton");
+    homeButton.classList.remove("activeButton");
+    bookmarkButton.classList.remove("activeButton");
   });
 
   loginButton.addEventListener("click", () => {
