@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div data-js="loginPage" class="login">
+    <div data-js="loginPage" class="login ">
         <form action="">
             <legend>Username</legend>
             <label for="username">
@@ -54,19 +54,19 @@
                 <label for="input-question">
                     <legend>Your Question:</legend>
                 </label>
-                <textarea required placeholder="Put your question here :" id="input-question" name="new-question"
-                    cols="30" rows="10"></textarea>
+                <textarea required placeholder="Put your question here :" id="input-question" name="question" cols="30"
+                    rows="10"></textarea>
                 <label for="input-answer">
-                    <legend>Your answers:</legend>
+                    <legend>Your answer:</legend>
                 </label>
 
-                <textarea cols="30" rows="10" required placeholder="Please seperate with comma(,) " id=" input-answer"
-                    name="new-answer" type="text"></textarea>
+                <textarea cols="30" rows="10" required placeholder="Your Answer " id=" input-answer" name="answer"
+                    type="text"></textarea>
                 <label for="input-tags">
                     <legend>Your tags:</legend>
                 </label>
                 <textarea cols="30" rows="3" required placeholder="Please seperate with comma(,) " id="input-tags"
-                    name="new-tags" type="text"></textarea>
+                    name="tags" type="text"></textarea>
                 <button class="submit-button" type="submit">Submit</button>
             </form>
 
@@ -117,7 +117,7 @@
         </main>
 
     </div>
-    <nav>
+    <nav class="navBar">
 
         <button><i class="gg-home"></i></button>
         <button><i class="gg-bookmark"></i></button>
