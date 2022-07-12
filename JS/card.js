@@ -1,7 +1,7 @@
-export default function FetchCard() {
+export default function FetchAndBuildCard() {
   const main = document.querySelector('[data-js="main"]');
-
-  const urlToFetch = "https://opentdb.com/api.php?amount=5"; // only 5 questions
+  // FETCHING
+  const urlToFetch = "https://opentdb.com/api.php?amount=2"; // only 5 questions
   function fetchQuestionsFromApi() {
     fetch(urlToFetch)
       .then((response) => response.json())
@@ -13,7 +13,7 @@ export default function FetchCard() {
       });
   }
   fetchQuestionsFromApi();
-
+  //CREATING CARDS
   function createCards(data) {
     data.forEach((datensatz) => {
       const element = document.createElement("div");
@@ -52,7 +52,7 @@ export default function FetchCard() {
       const divWrapper = document.createElement("div");
       divWrapper.classList.add("button-container");
       element.append(divWrapper);
-      divWrapper.setAttribute("data-js", "card__container");
+      divWrapper.setAttribute("data-js", "answer__container");
       /* create show answer button */
       const showAnswerButton = document.createElement("button");
       showAnswerButton.classList.add("answer");
@@ -66,24 +66,55 @@ export default function FetchCard() {
       oneAnswer.setAttribute("data-js", "answer");
       oneAnswer.innerHTML = datensatz.correct_answer;
       divWrapper.append(oneAnswer);
-
+      /* Create Tags Wrapper*/
       const tagsWrapper = document.createElement("div");
       tagsWrapper.classList.add("tags");
       element.append(tagsWrapper);
       const rightAnswer = document.createElement("button");
       tagsWrapper.append(rightAnswer);
-      rightAnswer.innerText = datensatz.correct_answer;
-      rightAnswer.addEventListener("click", () => {
-        rightAnswer.classList.toggle("rightAnswer");
-      });
+      /* Create Tags */
       datensatz.incorrect_answers.forEach((tag) => {
         const newTag = document.createElement("button");
         newTag.innerText = tag;
         tagsWrapper.append(newTag);
+        rightAnswer.innerText = datensatz.correct_answer;
+        rightAnswer.addEventListener("click", () => {
+          rightAnswer.classList.toggle("rightAnswer");
+        });
         newTag.addEventListener("click", () => {
           newTag.classList.toggle("wrongAnswer");
         });
       });
+    });
+
+    // SHOW ANSWERS
+    const cardContainer = document.querySelectorAll(
+      '[data-js="answer__container"]'
+    );
+    cardContainer.forEach((card) => {
+      const button = card.querySelector('[data-js="showAnswer"]');
+      const answer = card.querySelector('[data-js="answer"]');
+
+      button.addEventListener("click", () => {
+        answer.classList.toggle("showAnswer");
+        if (button.innerHTML === "Show Answer") {
+          button.innerHTML = "Hide Answer";
+        } else {
+          button.innerHTML = "Show Answer";
+        }
+      });
+    });
+    // BOOKMARK
+    let bookmarks = document.querySelectorAll(".bookmark-button");
+
+    function Bookmarking(bookmarks) {
+      bookmarks.addEventListener("click", () => {
+        bookmarks.classList.toggle("filterBlue");
+      });
+    }
+
+    bookmarks.forEach((mark) => {
+      Bookmarking(mark);
     });
   }
 }
