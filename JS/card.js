@@ -1,18 +1,21 @@
 export default function FetchAndBuildCard() {
   const main = document.querySelector('[data-js="main"]');
   // FETCHING
-  const urlToFetch = "https://opentdb.com/api.php?amount=2"; // only 5 questions
-  function fetchQuestionsFromApi() {
-    fetch(urlToFetch)
-      .then((response) => response.json())
-      .then((data) => {
-        createCards(data.results);
-      })
-      .catch((error) => {
-        console.error(error.message);
-      });
+  const urlToFetch =
+    "https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple"; // only 5 questions
+  async function fetchQuestionsFromApi() {
+    try {
+      const res = await fetch(urlToFetch);
+      const data = await res.json();
+      const results = data.results;
+      createCards(results);
+    } catch (error) {
+      console.error(error.message);
+    }
   }
+
   fetchQuestionsFromApi();
+
   //CREATING CARDS
   function createCards(data) {
     data.forEach((datensatz) => {
@@ -35,6 +38,7 @@ export default function FetchAndBuildCard() {
       headerButton.classList.add("bookmark-button");
       header.append(headerButton);
       headerButton.setAttribute("data-js", "bookmark-button");
+      let isBookmarked = false;
 
       /* create card header bookmark button image */
       const bookmarkImage = document.createElement("img");
@@ -73,16 +77,26 @@ export default function FetchAndBuildCard() {
       const rightAnswer = document.createElement("button");
       tagsWrapper.append(rightAnswer);
       /* Create Tags */
-      datensatz.incorrect_answers.forEach((tag) => {
+
+      let randomArray = ["", "", ""];
+      const rightAnswerForArray = datensatz.correct_answer;
+      randomArray.push(datensatz.incorrect_answers);
+      const finishedArray = randomArray.pop();
+
+      const randomStelle = Math.floor(Math.random() * 4);
+
+      finishedArray.splice(randomStelle, 0, rightAnswerForArray);
+      finishedArray.forEach((item) => {
         const newTag = document.createElement("button");
-        newTag.innerText = tag;
+        newTag.innerHTML = item;
         tagsWrapper.append(newTag);
-        rightAnswer.innerText = datensatz.correct_answer;
-        rightAnswer.addEventListener("click", () => {
-          rightAnswer.classList.toggle("rightAnswer");
-        });
         newTag.addEventListener("click", () => {
-          newTag.classList.toggle("wrongAnswer");
+          let criteria1 = datensatz.correct_answer;
+          if (newTag.innerText === criteria1) {
+            newTag.classList.toggle("rightAnswer");
+          } else {
+            newTag.classList.toggle("wrongAnswer");
+          }
         });
       });
     });

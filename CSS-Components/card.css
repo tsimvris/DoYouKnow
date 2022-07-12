@@ -83,6 +83,9 @@
   content: "#";
   margin-right: 5px;
 }
+.tags button:first-child {
+  display: none;
+}
 /*.tags button:hover {
   background-color: var(--icons-button-color);
   color: var(--font-color);

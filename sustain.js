@@ -76,3 +76,27 @@ questionCards.forEach((card) => {
     tagsWrapper.append(newTag);
   });
 });
+
+fetch(urlToFetch)
+  .then((response) => response.json())
+  .then((data) => {
+    createCards(data.results);
+    const questions = data.results.map((title) => {
+      return title.question;
+    });
+  })
+  .catch((error) => {
+    console.error(error.message);
+  });
+datensatz.incorrect_answers.forEach((tag) => {
+  const newTag = document.createElement("button");
+  newTag.innerHTML = pos1[tag];
+  tagsWrapper.append(newTag);
+  rightAnswer.innerHTML = datensatz.correct_answer;
+  rightAnswer.addEventListener("click", () => {
+    rightAnswer.classList.toggle("rightAnswer");
+  });
+  newTag.addEventListener("click", () => {
+    newTag.classList.toggle("wrongAnswer");
+  });
+});
