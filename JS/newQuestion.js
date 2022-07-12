@@ -1,17 +1,19 @@
-export default function NewQuestion() {
+export default function CreateQuestion() {
   const form = document.querySelector('[data-js="form"]');
   let fragenArray = [];
   form.addEventListener("submit", (event) => {
     event.preventDefault(); // disables page refresh
     // Get our Form Values
-    const neuFrage = form.elements.question.value;
-    const neuAntwort = form.elements.answer.value;
-    const neuTags = form.elements.tags.value;
+    const newQuestion = form.elements.question.value;
+    const newAnswer = form.elements.answer.value;
+    const newTags = form.elements.tags.value.split(","); // split tags, seperated by COMMA
+
+    const tagsWithoutWhitespaces = newTags.map((tag) => tag.trim()); // delete whitespaces
 
     const neuFrageCard = {
-      question: neuFrage,
-      answer: neuAntwort,
-      tags: neuTags,
+      question: newQuestion,
+      answer: newAnswer,
+      tags: tagsWithoutWhitespaces,
     };
     fragenArray.push(neuFrageCard);
     form.reset();
