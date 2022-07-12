@@ -1,10 +1,10 @@
 import Bookmark from "./JS/bookmark.js";
 import Answer from "./JS/show-answer.js";
 import OnePage from "./JS/visibilities.js";
-import addCard from "./JS/card.js";
+import FetchCard from "./JS/card.js";
 import CreateQuestion from "./JS/newQuestion.js";
 OnePage();
-addCard();
+FetchCard();
 Bookmark();
 Answer();
 CreateQuestion();

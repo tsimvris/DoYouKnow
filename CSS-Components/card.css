@@ -83,7 +83,15 @@
   content: "#";
   margin-right: 5px;
 }
-.tags button:hover {
+/*.tags button:hover {
   background-color: var(--icons-button-color);
   color: var(--font-color);
+}*/
+.rightAnswer {
+  background-color: green !important;
+  color: white !important;
+}
+.wrongAnswer {
+  color: white !important;
+  background-color: red !important;
 }

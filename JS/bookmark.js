@@ -1,13 +1,13 @@
 export default function Bookmark() {
-  let bookmarks = document.querySelectorAll(".booky");
+  let bookmarks = document.querySelectorAll(".bookmark-button");
 
-  function Bookmark(bookmarks) {
+  function Bookmarking(bookmarks) {
     bookmarks.addEventListener("click", () => {
       bookmarks.classList.toggle("filterBlue");
     });
   }
 
   bookmarks.forEach((mark) => {
-    Bookmark(mark);
+    Bookmarking(mark);
   });
 }
