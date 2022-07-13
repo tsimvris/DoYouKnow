@@ -80,7 +80,7 @@
   text-align: center;
 }
 .tags button:before {
-  content: "#";
+  content: "";
   margin-right: 5px;
 }
 .tags button:first-child {
