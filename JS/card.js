@@ -2,7 +2,7 @@ export default function FetchAndBuildCard() {
   const main = document.querySelector('[data-js="main"]');
   // FETCHING
   const urlToFetch =
-    "https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple"; // only 5 questions
+    "https://opentdb.com/api.php?amount=5&difficulty=easy&type=multiple"; // only 5 questions
   async function fetchQuestionsFromApi() {
     try {
       const res = await fetch(urlToFetch);
@@ -78,7 +78,7 @@ export default function FetchAndBuildCard() {
       tagsWrapper.append(rightAnswer);
       /* Create Tags */
 
-      let randomArray = ["", "", ""];
+      let randomArray = [];
       const rightAnswerForArray = datensatz.correct_answer;
       randomArray.push(datensatz.incorrect_answers);
       const finishedArray = randomArray.pop();
@@ -91,8 +91,7 @@ export default function FetchAndBuildCard() {
         newTag.innerHTML = item;
         tagsWrapper.append(newTag);
         newTag.addEventListener("click", () => {
-          let criteria1 = datensatz.correct_answer;
-          if (newTag.innerText === criteria1) {
+          if (newTag.innerText === rightAnswerForArray) {
             newTag.classList.toggle("rightAnswer");
           } else {
             newTag.classList.toggle("wrongAnswer");
