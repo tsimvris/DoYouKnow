@@ -1,4 +1,6 @@
 export default function FetchAndBuildCard() {
+  console.clear();
+
   const main = document.querySelector('[data-js="main"]');
   // FETCHING
   const urlToFetch =
@@ -15,6 +17,7 @@ export default function FetchAndBuildCard() {
   }
 
   fetchQuestionsFromApi();
+  const questionsArray = [];
 
   //CREATING CARDS
   function createCards(data) {
@@ -51,6 +54,7 @@ export default function FetchAndBuildCard() {
       const oneQuestion = document.createElement("p");
       element.append(oneQuestion);
       oneQuestion.innerHTML = datensatz.question;
+      const newQ = datensatz.question;
 
       /* create show answer button and answer container*/
       const divWrapper = document.createElement("div");
@@ -70,6 +74,8 @@ export default function FetchAndBuildCard() {
       oneAnswer.setAttribute("data-js", "answer");
       oneAnswer.innerHTML = datensatz.correct_answer;
       divWrapper.append(oneAnswer);
+      let newA = datensatz.correct_answer;
+
       /* Create Tags Wrapper*/
       const tagsWrapper = document.createElement("div");
       tagsWrapper.classList.add("tags");
@@ -82,9 +88,7 @@ export default function FetchAndBuildCard() {
       const rightAnswerForArray = datensatz.correct_answer;
       randomArray.push(datensatz.incorrect_answers);
       const finishedArray = randomArray.pop();
-
       const randomStelle = Math.floor(Math.random() * 4);
-
       finishedArray.splice(randomStelle, 0, rightAnswerForArray);
       finishedArray.forEach((item) => {
         const newTag = document.createElement("button");
@@ -98,9 +102,17 @@ export default function FetchAndBuildCard() {
           }
         });
       });
+      let newObject = {
+        question: newQ,
+        answer: newA,
+        tags: finishedArray,
+      };
+      questionsArray.push(newObject);
     });
 
-    // SHOW ANSWERS
+    /*
+     SHOW ANSWERS
+     */
     const cardContainer = document.querySelectorAll(
       '[data-js="answer__container"]'
     );
@@ -117,7 +129,9 @@ export default function FetchAndBuildCard() {
         }
       });
     });
-    // BOOKMARK
+    /*
+    BOOKMARK
+    */
     let bookmarks = document.querySelectorAll(".bookmark-button");
 
     function Bookmarking(bookmarks) {
@@ -130,4 +144,26 @@ export default function FetchAndBuildCard() {
       Bookmarking(mark);
     });
   }
+  /*
+    create new questions
+    */
+  const form = document.querySelector('[data-js="form"]');
+  form.addEventListener("submit", (event) => {
+    event.preventDefault(); // disables page refresh
+    // Get our Form Values
+    const newQuestion = form.elements.question.value;
+    const newAnswer = form.elements.answer.value;
+    const newTags = form.elements.tags.value.split(","); // split tags, seperated by COMMA
+
+    const tagsWithoutWhitespaces = newTags.map((tag) => tag.trim()); // delete whitespaces
+
+    const neuFrageCard = {
+      question: newQuestion,
+      answer: newAnswer,
+      tags: tagsWithoutWhitespaces,
+    };
+    questionsArray.push(neuFrageCard);
+    form.reset();
+    form.focus();
+  });
 }
