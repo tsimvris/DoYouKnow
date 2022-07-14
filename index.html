@@ -1,132 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Did You know ?</title>
-    <script src="https://kit.fontawesome.com/cae43a8ae9.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/cae43a8ae9.js"
+      crossorigin="anonymous"
+    ></script>
 
-    <link href="https://css.gg/css?=|bookmark|home|menu-boxed|profile" rel="stylesheet">
-</head>
+    <link
+      href="https://css.gg/css?=|bookmark|home|menu-boxed|profile"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-    <div data-js="loginPage" class="login ">
-        <form action="">
-            <legend>Username</legend>
-            <label for="username">
-                <input class="username" type="text" name="username" id="username" placeholder="Your Username:" required>
-            </label>
-            <legend>Password</legend>
-            <label for="Password">
-                <input class="password" type="password" name="password" id="password" placeholder="Your Password:"
-                    required>
-            </label>
-        </form>
-        <button data-js="login" class="">Login</button>
+  <body>
+    <div data-js="loginPage" class="login">
+      <form action="">
+        <legend>Username</legend>
+        <label for="username">
+          <input
+            class="username"
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Your Username:"
+            required
+          />
+        </label>
+        <legend>Password</legend>
+        <label for="Password">
+          <input
+            class="password"
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Your Password:"
+            required
+          />
+        </label>
+      </form>
+      <button data-js="login" class="">Login</button>
     </div>
 
     <div class="mainPage showMain" data-js="main">
-        <header>
-            <h1>Did You know ?</h1>
-        </header>
-
-
+      <header>
+        <h1>Did You know ?</h1>
+      </header>
     </div>
 
     <div class="bookmarkSection showBookmarks" data-js="bookmarkPage">
-        <header>
-            <h1>My Bookmarks</h1>
-        </header>
-        <main>
-
-        </main>
-
+      <header>
+        <h1>My Bookmarks</h1>
+      </header>
+      <main></main>
     </div>
     <div class="createSection showCreate" data-js="create">
-        <header>
-            <h1>Create</h1>
-        </header>
-        <main>
-            <form data-js="form" class="add-question-form" action="">
-                <label for="input-question">
-                    <legend>Your Question:</legend>
-                </label>
-                <textarea required placeholder="Put your question here :" id="input-question" name="question" cols="30"
-                    rows="10"></textarea>
-                <label for="input-answer">
-                    <legend>Your answer:</legend>
-                </label>
+      <header>
+        <h1>Create</h1>
+      </header>
+      <main>
+        <form data-js="form" class="add-question-form" action="">
+          <label for="input-question">
+            <legend>Your Question:</legend>
+          </label>
+          <textarea
+            required
+            placeholder="Put your question here :"
+            id="input-question"
+            name="question"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <label for="input-answer">
+            <legend>Your answer:</legend>
+          </label>
 
-                <textarea cols="30" rows="10" required placeholder="Your Answer " id=" input-answer" name="answer"
-                    type="text"></textarea>
-                <label for="input-tags">
-                    <legend>Your tags:</legend>
-                </label>
-                <textarea cols="30" rows="3" required placeholder="Please seperate with comma(,) " id="input-tags"
-                    name="tags" type="text"></textarea>
-                <button class="submit-button" type="submit">Submit</button>
-            </form>
-
-        </main>
-
+          <textarea
+            cols="30"
+            rows="10"
+            required
+            placeholder="Your Answer "
+            id=" input-answer"
+            name="answer"
+            type="text"
+          ></textarea>
+          <label for="input-tags">
+            <legend>Your tags:</legend>
+          </label>
+          <textarea
+            cols="30"
+            rows="3"
+            required
+            placeholder="Please seperate with comma(,) "
+            id="input-tags"
+            name="tags"
+            type="text"
+          ></textarea>
+          <button class="submit-button" type="submit">Submit</button>
+        </form>
+      </main>
     </div>
     <div data-js="profile" class="profileSection showProfile">
-        <header>
-            <h1>Profile</h1>
-        </header>
-        <main>
-            <div class="profile-container">
-                <div class="profile-info">
-                    <img class="profile-pic" src="../assets/me.jpeg" alt="Profile Picture">
-                    <h3 class="username">Petros_91</h3>
-                </div>
-                <div class="aboutMe">
-                    <h5>About Me</h5>
+      <header>
+        <h1>Profile</h1>
+      </header>
+      <main>
+        <div class="profile-container">
+          <div class="profile-info">
+            <img
+              class="profile-pic"
+              src="../assets/me.jpeg"
+              alt="Profile Picture"
+            />
+            <h3 class="username">Petros_91</h3>
+          </div>
+          <div class="aboutMe">
+            <h5>About Me</h5>
 
-                    <p class="text-about-me">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil beatae
-                        aliquid
-                        qui veritatis ad. Ut
-                        alias
-                        aspernatur rem iste sunt consequatur nihil nisi mollitia earum?</p><br>
-
-
-                </div>
-                <div class="my-tags">
-                    <h5>My Skills</h5>
-                    <ul>
-                        <li>Countries</li>
-                        <li>Celebrities</li>
-                        <li>History</li>
-                        <li>Technology</li>
-                        <li>Space</li>
-                        <li>Celebrities</li>
-                        <li>History</li>
-                        <li>Space</li>
-                        <li>Technology</li>
-                        <li>Space</li>
-
-                    </ul>
-                </div>
-                <button class="logout" data-js="logout" type="submit">Logout</button>
-            </div>
-
-
-        </main>
-
+            <p class="text-about-me">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+              beatae aliquid qui veritatis ad. Ut alias aspernatur rem iste sunt
+              consequatur nihil nisi mollitia earum?
+            </p>
+            <br />
+          </div>
+          <div class="my-tags">
+            <h5>My Skills</h5>
+            <ul>
+              <li>Countries</li>
+              <li>Celebrities</li>
+              <li>History</li>
+              <li>Technology</li>
+              <li>Space</li>
+              <li>Celebrities</li>
+              <li>History</li>
+              <li>Space</li>
+              <li>Technology</li>
+              <li>Space</li>
+            </ul>
+          </div>
+          <button class="logout" data-js="logout" type="submit">Logout</button>
+        </div>
+      </main>
     </div>
     <nav class="navBar">
-
-        <button><i class="gg-home"></i></button>
-        <button><i class="gg-bookmark"></i></button>
-        <button><i class="gg-menu-boxed"></i></button>
-        <button><i class="gg-profile"></i></button>
-
+      <button><i class="gg-home"></i></button>
+      <button><i class="gg-bookmark"></i></button>
+      <button><i class="gg-menu-boxed"></i></button>
+      <button><i class="gg-profile"></i></button>
     </nav>
     <script src="./index.js" defer type="module"></script>
     <script src="./visibilities.js" defer></script>
-</body>
-
+  </body>
 </html>

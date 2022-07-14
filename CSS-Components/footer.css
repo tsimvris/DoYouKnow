@@ -9,6 +9,7 @@ nav {
   width: 100vw;
   background-color: var(--header-color);
 }
+
 nav button {
   display: flex;
   justify-content: center;

@@ -3,13 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --background-color: #161a21; /* SAFE */
   --header-color: #000; /* SAFE */
   --font-color: #cd0f8b;
-  --icons-button-color: #ff6e48; /*SAFE */
+  --icons-button-color: #ff6e48; /* SAFE */
   --generic-color: #05b0bc;
 }
+
 body {
   background-color: var(--background-color);
   color: var(--font-color);
