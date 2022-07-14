@@ -41,7 +41,6 @@ export default function FetchAndBuildCard() {
       headerButton.classList.add('bookmark-button');
       header.append(headerButton);
       headerButton.setAttribute('data-js', 'bookmark-button');
-      let isBookmarked = false;
 
       /* create card header bookmark button image */
       const bookmarkImage = document.createElement('img');
