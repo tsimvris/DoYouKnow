@@ -2,6 +2,7 @@
   filter: invert(46%) sepia(73%) saturate(596%) hue-rotate(136deg)
     brightness(103%) contrast(96%);
 }
+
 .filter-orange {
   filter: invert(58%) sepia(39%) saturate(3628%) hue-rotate(330deg)
     brightness(101%) contrast(101%);

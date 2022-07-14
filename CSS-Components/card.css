@@ -9,6 +9,7 @@
   flex-direction: column;
   margin-bottom: 30px;
 }
+
 .card-top {
   display: flex;
   justify-content: space-between;
@@ -16,12 +17,15 @@
   z-index: 16;
   margin: 5px;
 }
+
 .card-top h3 {
   color: var(--icons-button-color);
 }
+
 .showAnswer {
   visibility: hidden;
 }
+
 .bookmark-button {
   background: transparent;
   border: 0;
@@ -29,6 +33,7 @@
   top: -22px;
   right: 15px;
 }
+
 .filter-orange {
   position: absolute;
   top: 15px;
@@ -38,13 +43,16 @@
   filter: invert(58%) sepia(39%) saturate(3628%) hue-rotate(330deg)
     brightness(101%) contrast(101%);
 }
+
 .filterBlue {
   filter: invert(46%) sepia(73%) saturate(596%) hue-rotate(136deg)
     brightness(103%) contrast(96%) !important;
 }
+
 .card p {
   margin: 20px;
 }
+
 .button-container {
   display: flex;
   flex-direction: column;
@@ -52,15 +60,18 @@
   align-items: center;
   margin: 10px;
 }
+
 .answer {
   width: 50%;
   background-color: var(--icons-button-color);
   color: var(--generic-color);
 }
+
 .answer:hover {
   color: var(--icons-button-color);
   background-color: var(--generic-color);
 }
+
 .tags {
   margin: 20px;
   display: flex;
@@ -70,6 +81,7 @@
   row-gap: 10px;
   column-gap: 10px;
 }
+
 .tags button {
   border: 2px dotted var(--icons-button-color);
   border-radius: 5px;
@@ -79,21 +91,25 @@
   font-weight: 600;
   text-align: center;
 }
+
 .tags button:before {
-  content: "";
+  content: '';
   margin-right: 5px;
 }
+
 .tags button:first-child {
   display: none;
 }
-/*.tags button:hover {
+.tags button:hover {
   background-color: var(--icons-button-color);
   color: var(--font-color);
-}*/
+}
+
 .rightAnswer {
   background-color: green !important;
   color: white !important;
 }
+
 .wrongAnswer {
   color: white !important;
   background-color: red !important;
