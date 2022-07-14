@@ -41,8 +41,7 @@
 
 .my-tags ul {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   column-gap: 15px;
   row-gap: 15px;
   list-style: '';
